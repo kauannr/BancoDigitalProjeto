@@ -1,58 +1,53 @@
-public class Corrente extends Conta{
 
+public class Corrente extends Conta {
+    private static final Double TAXA_DE_ABERTURA = -19.85;
 
-
-
-    @Override
-    public void Cliente(String nome, String cpf, String nascimento, int rg) {
-        // TODO Auto-generated method stub
-        super.Cliente(nome, cpf, nascimento, rg);
+    public Corrente(String nome, String cpf, String nascimento, Integer rg) {
+        super(nome, cpf, nascimento, rg);
+        this.saldo = TAXA_DE_ABERTURA;
     }
 
     @Override
-    public void depositar(double valorDeposito) {
-        // TODO Auto-generated method stub
-        super.depositar(valorDeposito);
+    public void Depositar(double valorDeposito) {
+        super.Depositar(valorDeposito);
     }
 
     @Override
-    public int getAgencia() {
-        // TODO Auto-generated method stub
+    public Integer getAgencia() {
         return super.getAgencia();
     }
 
     @Override
-    public int getNumero_conta() {
-        // TODO Auto-generated method stub
+    public Integer getNumero_conta() {
         return super.getNumero_conta();
+    }
+
+    public static Double getTAXA_DE_ABERTURA() {
+        return TAXA_DE_ABERTURA;
     }
 
     @Override
     public double getSaldo() {
-        // TODO Auto-generated method stub
         return super.getSaldo();
     }
 
     @Override
-    public void sacar(double valorSaque) {
-        // TODO Auto-generated method stub
-        super.sacar(valorSaque);
+    public void Sacar(double valorSaque) {
+        super.Sacar(valorSaque);
     }
 
     @Override
-    public void tranferir(double valorTrans, Conta conta) {
-        // TODO Auto-generated method stub
-        super.tranferir(valorTrans, conta);
+    public void Tranferir(Double valorTrans, Conta destino) {
+        super.Tranferir(valorTrans, destino);
     }
+
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
         return "Conta Corrente" + super.numero_conta;
     }
 
     @Override
     public String getNome() {
-        // TODO Auto-generated method stub
         return super.getNome();
     }
 
